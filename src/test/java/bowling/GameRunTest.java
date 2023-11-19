@@ -19,9 +19,9 @@ class GameRunTest {
 	@Test
 	void testBeginGame() {
 		assertEquals(1, partie.numeroTourCourant(),
-				"On doit commencer au tour n°1");
+			"On doit commencer au tour n°1");
 		assertEquals(1, partie.numeroProchainLancer(),
-				"On doit commencer à la boule n°1");
+			"On doit commencer à la boule n°1");
 	}
 
 	@Test
@@ -36,18 +36,18 @@ class GameRunTest {
 	void testAllOnes() {
 		lancerPlusieurs(20, 1);
 		assertEquals(0, partie.numeroTourCourant(),
-				"On a fini, le n° de tour doit être 0");
+			"On a fini, le n° de tour doit être 0");
 		assertTrue(partie.estTerminee(),
-				"Le jeu doit être terminé");
+			"Le jeu doit être terminé");
 	}
 
 	@Test
 	void testOneSpare() {
 		faireUnSpare();
 		assertEquals(2, partie.numeroTourCourant(),
-				"On a fini le premier tour, le n° de tour doit être 2");
+			"On a fini le premier tour, le n° de tour doit être 2");
 		assertEquals(1, partie.numeroProchainLancer(),
-				"On doit commencer le tour à la boule n°1");
+			"On doit commencer le tour à la boule n°1");
 	}
 
 	@Test
@@ -55,9 +55,9 @@ class GameRunTest {
 		faireUnStrike();
 
 		assertEquals(2, partie.numeroTourCourant(),
-				"On a fini le premier tour, le n° de tour doit être 2");
+			"On a fini le premier tour, le n° de tour doit être 2");
 		assertEquals(1, partie.numeroProchainLancer(),
-				"On doit commencer le tour à la boule n°1");
+			"On doit commencer le tour à la boule n°1");
 	}
 
 	/**
