@@ -17,7 +17,7 @@ public class Tour {
 	}
 
 	public boolean estUnSpare() {
-		return numCoup == 2 && getScoreLancer(1) + getScoreLancer(2) == PartieMonoJoueur.nbQuilles && numTour != PartieMonoJoueur.nbTours;
+		return numCoup == 2 && getScoreLancer(1) + getScoreLancer(2) == PartieMonoJoueur.nbQuilles && numTour != PartieMonoJoueur.nbT;
 	}
 
 	public boolean estFini() {
@@ -50,7 +50,7 @@ public class Tour {
 			L.add(lancer);
 			if  (getScore() == PartieMonoJoueur.nbQuilles){
 				numCoup += 1;
-			} else if (getScore() == PartieMonoJoueur.nbQuilles && numTour != PartieMonoJoueur.nbTours){
+			} else if (getScore() == PartieMonoJoueur.nbQuilles && numTour != PartieMonoJoueur.nbT){
 				estFini = true;
 			} else {
 				numCoup++;
@@ -58,7 +58,7 @@ public class Tour {
 		} else if (numCoup == 2) {
 			L.add(lancer);
 			estFini = true;
-			if (numTour == PartieMonoJoueur.nbTours && !(getScore() < PartieMonoJoueur.nbQuilles)) {
+			if (numTour == PartieMonoJoueur.nbT && !(getScore() < PartieMonoJoueur.nbQuilles)) {
 				numCoup++;
 				estFini = false;
 			}
